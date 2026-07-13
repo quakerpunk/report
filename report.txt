@@ -1,6 +1,21 @@
-Hello from GitHub Pages!
+==================================================
+WAYNE COUNTY, OHIO WEATHER REPORT
 
-If you're reading this over Winlink, it worked.
+Updated: 2026-07-12 08:44 PM EDT
 
-73,
-John
+CURRENT CONDITIONS
+(Placeholder)
+
+FORECAST
+(Placeholder)
+
+ALERTS
+(Placeholder)
+
+METAR
+(Placeholder)
+
+SPC
+(Placeholder)
+
+==================================================
