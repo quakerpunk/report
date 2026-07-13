@@ -1,6 +1,7 @@
 import urllib.request
 import json
 import re
+import xml.etree.ElementTree as ET
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -9,8 +10,25 @@ LON = -81.76
 TZ = ZoneInfo("America/New_York")
 
 HEADERS = {
-    "User-Agent": "WinlinkCustomReport/2.5"
+    "User-Agent": "WinlinkCustomReport/3.0"
 }
+
+
+def fetch_hamqsl():
+    req = urllib.request.Request(
+        "https://www.hamqsl.com/solarxml.php",
+        headers=HEADERS
+    )
+
+    with urllib.request.urlopen(req, timeout=20) as r:
+        root = ET.fromstring(r.read())
+
+    solar = root.find("solardata")
+
+    return {
+        "sfi": solar.findtext("solarflux", "N/A").strip(),
+        "kp": solar.findtext("kindex", "N/A").strip()
+    }
 
 
 def fetch_json(url):
@@ -20,8 +38,9 @@ def fetch_json(url):
 
 
 def hazard_summary(periods, alerts):
+
     if alerts["features"]:
-        return alerts["features"][0]["properties"]["headline"]
+        return "See ALERTS."
 
     text = " ".join(p["detailedForecast"] for p in periods[:4])
     lower = text.lower()
@@ -76,6 +95,14 @@ alerts = fetch_json(f"https://api.weather.gov/alerts/active?point={LAT},{LON}")
 sun = fetch_json(
     f"https://api.sunrise-sunset.org/json?lat={LAT}&lng={LON}&formatted=0"
 )
+
+try:
+    solar = fetch_hamqsl()
+except Exception:
+    solar = {
+        "sfi": "N/A",
+        "kp": "N/A"
+    }
 
 generated = datetime.now(TZ)
 
@@ -140,14 +167,24 @@ report.append(
 )
 
 if alerts["features"]:
+    alert = alerts["features"][0]["properties"]
+
+    expires = (
+        datetime.fromisoformat(alert["expires"])
+        .astimezone(TZ)
+        .strftime("%I:%M %p")
+        .lstrip("0")
+    )
+
     report.append(
-        f"ALERTS  : {alerts['features'][0]['properties']['headline']}"
+        f"ALERTS  : {alert['event']} until {expires}"
     )
 else:
     report.append("ALERTS  : None")
 
 report.append(f"HAZARDS : {hazard_summary(periods, alerts)}")
 report.append(f"FORECAST: {forecast_line}")
+report.append(f"HF      : SFI {solar['sfi']}   Kp {solar['kp']}")
 
 with open("report.txt", "w") as f:
     f.write("\n".join(report))
