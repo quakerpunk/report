@@ -1,14 +1,18 @@
-==========================================================
-REPORT
-==========================================================
+====================
+WINLINK REPORT
+====================
 
 Forecast Issued : 2026-07-13 03:47 AM EDT
-Report Generated: 2026-07-13 08:05 AM EDT
+Report Generated: 2026-07-13 08:11 AM EDT
 
 CURRENT CONDITIONS
 ------------------
 68°F  Sunny
 Wind:  0 mph
+
+ACTIVE ALERTS
+-------------
+None
 
 FORECAST
 --------
@@ -25,16 +29,8 @@ Sunny, with a high near 92. Heat index values as high as 96. West wind 2 to 6 mp
 Tuesday Night
 Mostly clear, with a low around 71. Heat index values as high as 96. West wind around 6 mph.
 
-ALERTS
-------
-(Coming in Version 2)
-
-METAR
------
-(Coming in Version 2)
-
-SPC OUTLOOK
------------
-(Coming in Version 2)
+SEVERE WEATHER
+----------------
+SPC Outlook: (Coming in Version 2.1)
 
 ==========================================================
