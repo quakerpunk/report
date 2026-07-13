@@ -1,5 +1,6 @@
 import urllib.request
 import json
+import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -8,7 +9,7 @@ LON = -81.76
 TZ = ZoneInfo("America/New_York")
 
 HEADERS = {
-    "User-Agent": "WayneCountyOffGridWeather/2.2"
+    "User-Agent": "WayneCountyOffGridWeather/2.3"
 }
 
 
@@ -19,35 +20,62 @@ def fetch(url):
 
 
 def hazard_summary(periods, alerts):
-
+    # Active alerts always take priority
     if alerts["features"]:
         return alerts["features"][0]["properties"]["headline"]
 
-    text = " ".join(p["detailedForecast"] for p in periods[:4]).lower()
+    text = " ".join(p["detailedForecast"] for p in periods[:4])
+    lower = text.lower()
 
-    checks = [
-        ("tornado", "Tornadoes possible."),
-        ("severe thunderstorm", "Severe thunderstorms possible."),
-        ("thunderstorm", "Thunderstorms possible."),
-        ("heavy rain", "Heavy rainfall possible."),
-        ("flash flood", "Flash flooding possible."),
-        ("flood", "Flooding possible."),
-        ("snow", "Snow expected."),
-        ("ice", "Icy conditions possible."),
-        ("freezing rain", "Freezing rain possible."),
-        ("heat index", "Heat index will be high."),
-        ("heat", "Hot weather expected."),
-        ("wind advisory", "Strong winds expected."),
-        ("gust", "Gusty winds expected."),
-        ("fog", "Reduced visibility in fog."),
-    ]
+    # Heat Index
+    m = re.search(r"Heat index values? as high as (\d+)", text, re.IGNORECASE)
+    if m:
+        return f"Heat index up to {m.group(1)}°F."
 
-    for word, message in checks:
-        if word in text:
-            return message
+    # Wind gusts
+    m = re.search(r"gusts? as high as (\d+)\s*mph", text, re.IGNORECASE)
+    if m:
+        return f"Wind gusts up to {m.group(1)} mph."
+
+    # Rainfall totals
+    m = re.search(
+        r"between ([0-9.]+) and ([0-9.]+) inches",
+        text,
+        re.IGNORECASE,
+    )
+    if m:
+        return f"Heavy rain: {m.group(1)}–{m.group(2)} inches possible."
+
+    # Thunderstorms
+    if "severe thunderstorm" in lower:
+        return "Severe thunderstorms possible."
+
+    if "thunderstorm" in lower:
+        return "Thunderstorms possible."
+
+    # Flooding
+    if "flash flood" in lower:
+        return "Flash flooding possible."
+
+    if "flood" in lower:
+        return "Flooding possible."
+
+    # Winter weather
+    if "freezing rain" in lower:
+        return "Freezing rain possible."
+
+    if "snow" in lower:
+        return "Snow expected."
+
+    if "fog" in lower:
+        return "Reduced visibility in fog."
 
     return "No significant hazards expected."
 
+
+# --------------------------------------------------------
+# Download weather data
+# --------------------------------------------------------
 
 points = fetch(f"https://api.weather.gov/points/{LAT},{LON}")
 
@@ -62,6 +90,12 @@ forecast_updated = datetime.fromisoformat(
 ).astimezone(TZ)
 
 current = hourly["properties"]["periods"][0]
+periods = forecast["properties"]["periods"]
+today = periods[0]
+
+# --------------------------------------------------------
+# Build report
+# --------------------------------------------------------
 
 report = []
 
@@ -77,10 +111,9 @@ report.append(
 )
 report.append("")
 
+# --------------------------------------------------------
 # Summary
-# Summary
-periods = forecast["properties"]["periods"]
-today = periods[0]
+# --------------------------------------------------------
 
 report.append("SUMMARY")
 report.append("-------")
@@ -93,28 +126,37 @@ if alerts["features"]:
 else:
     report.append("No active alerts.")
 
-report.append(f"Next hazard: {hazard_summary(periods, alerts)}")
+report.append(hazard_summary(periods, alerts))
 report.append("")
 
-# Current
+# --------------------------------------------------------
+# Current Conditions
+# --------------------------------------------------------
+
 report.append("CURRENT CONDITIONS")
 report.append("------------------")
+
 report.append(
-    f"{current['temperature']}°{current['temperatureUnit']}  {current['shortForecast']}"
+    f"{current['temperature']}°{current['temperatureUnit']}  "
+    f"{current['shortForecast']}"
 )
 
+wind_speed = current["windSpeed"].strip()
 wind_dir = current["windDirection"].strip()
 
-if current["windSpeed"].startswith("0"):
+if wind_speed.startswith("0"):
     report.append("Wind: Calm")
 elif wind_dir:
-    report.append(f"Wind: {wind_dir} {current['windSpeed']}")
+    report.append(f"Wind: {wind_dir} {wind_speed}")
 else:
-    report.append(f"Wind: {current['windSpeed']}")
+    report.append(f"Wind: {wind_speed}")
 
 report.append("")
 
-# Alerts
+# --------------------------------------------------------
+# Active Alerts
+# --------------------------------------------------------
+
 report.append("ACTIVE ALERTS")
 report.append("-------------")
 
@@ -126,20 +168,27 @@ else:
 
 report.append("")
 
+# --------------------------------------------------------
 # Forecast
+# --------------------------------------------------------
+
 report.append("FORECAST")
 report.append("--------")
 
-for p in forecast["properties"]["periods"][:4]:
+for period in periods[:4]:
     report.append("")
-    report.append(p["name"])
+    report.append(period["name"])
     report.append("")
-    report.append(p["detailedForecast"])
+    report.append(period["detailedForecast"])
 
 report.append("")
 report.append("=" * 58)
 
+# --------------------------------------------------------
+# Save report
+# --------------------------------------------------------
+
 with open("report.txt", "w") as f:
     f.write("\n".join(report))
 
-print("Updated report.txt")
+print("report.txt updated successfully.")
