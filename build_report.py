@@ -126,12 +126,6 @@ else:
 
 report.append("")
 
-# Hazard
-report.append("NEXT HAZARD")
-report.append("-----------")
-report.append(hazard_summary(forecast["properties"]["periods"], alerts))
-report.append("")
-
 # Forecast
 report.append("FORECAST")
 report.append("--------")
