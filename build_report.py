@@ -38,9 +38,9 @@ current = hourly["properties"]["periods"][0]
 
 report = []
 
-report.append("=" * 58)
-report.append("WAYNE COUNTY OFF-GRID WEATHER REPORT")
-report.append("=" * 58)
+report.append("=" * 20)
+report.append("WINLINK REPORT")
+report.append("=" * 20)
 report.append("")
 report.append(
     f"Forecast Issued : {forecast_updated.strftime('%Y-%m-%d %I:%M %p %Z')}"
