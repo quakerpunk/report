@@ -42,7 +42,7 @@ forecast_updated = datetime.fromisoformat(
 report = []
 
 report.append("=" * 58)
-report.append("WAYNE COUNTY OFF-GRID WEATHER REPORT")
+report.append("REPORT")
 report.append("=" * 58)
 report.append("")
 report.append(f"Forecast Issued : {forecast_updated.strftime('%Y-%m-%d %I:%M %p %Z')}")
