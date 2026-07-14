@@ -25,9 +25,24 @@ def fetch_hamqsl():
 
     solar = root.find("solardata")
 
+    conditions = {}
+
+    calc = solar.find("calculatedconditions")
+
+    if calc is not None:
+        for band in calc.findall("band"):
+            name = band.attrib["name"]
+            when = band.attrib["time"]
+
+            if name not in conditions:
+                conditions[name] = {}
+
+            conditions[name][when] = band.text.strip()
+
     return {
         "sfi": solar.findtext("solarflux", "N/A").strip(),
-        "kp": solar.findtext("kindex", "N/A").strip()
+        "kp": solar.findtext("kindex", "N/A").strip(),
+        "bands": conditions,
     }
 
 
@@ -101,7 +116,13 @@ try:
 except Exception:
     solar = {
         "sfi": "N/A",
-        "kp": "N/A"
+        "kp": "N/A",
+        "bands": {
+            "80m-40m": {"day": "N/A", "night": "N/A"},
+            "30m-20m": {"day": "N/A", "night": "N/A"},
+            "17m-15m": {"day": "N/A", "night": "N/A"},
+            "12m-10m": {"day": "N/A", "night": "N/A"},
+        },
     }
 
 generated = datetime.now(TZ)
@@ -161,6 +182,9 @@ report.append(f"Updated : {generated.strftime('%b %d %I:%M %p %Z')}")
 report.append(f"Sunrise: {sunrise}   Sunset: {sunset}")
 report.append("")
 
+report.append("WEATHER CONDITIONS")
+report.append("------------------")
+
 report.append(
     f"CURRENT : {current['temperature']}°{current['temperatureUnit']}, "
     f"{current['shortForecast']}"
@@ -184,7 +208,32 @@ else:
 
 report.append(f"HAZARDS : {hazard_summary(periods, alerts)}")
 report.append(f"FORECAST: {forecast_line}")
-report.append(f"HF      : SFI {solar['sfi']}   Kp {solar['kp']}")
+
+report.append("")
+
+report.append("HF CONDITIONS")
+report.append("-------------")
+
+report.append(f"SFI     : {solar['sfi']}")
+report.append(f"K-INDEX : {solar['kp']}")
+
+bands = solar["bands"]
+
+report.append(
+    f"80/40   : Day {bands['80m-40m']['day']} | Night {bands['80m-40m']['night']}"
+)
+
+report.append(
+    f"30/20   : Day {bands['30m-20m']['day']} | Night {bands['30m-20m']['night']}"
+)
+
+report.append(
+    f"17/15   : Day {bands['17m-15m']['day']} | Night {bands['17m-15m']['night']}"
+)
+
+report.append(
+    f"12/10   : Day {bands['12m-10m']['day']} | Night {bands['12m-10m']['night']}"
+)
 
 with open("report.txt", "w") as f:
     f.write("\n".join(report))
