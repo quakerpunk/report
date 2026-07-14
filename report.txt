@@ -1,9 +1,9 @@
 WINLINK CUSTOM REPORT
 ---------------------
-Updated : Jul 14 02:04 AM EDT
+Updated : Jul 14 05:48 AM EDT
 Sunrise: 6:06 AM   Sunset: 8:59 PM
 
-CURRENT : 67°F, Clear
+CURRENT : 65°F, Clear
 ALERTS  : None
 HAZARDS : Heat index up to 100°F.
 FORECAST: Clear. Low 65°F. Wind W 1 mph.
