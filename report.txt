@@ -1,20 +1,20 @@
 WINLINK CUSTOM REPORT
 ---------------------
-Updated : Jul 14 09:27 PM EDT
+Updated : Jul 15 02:08 AM EDT
 Sunrise: 6:07 AM   Sunset: 8:59 PM
 
 WEATHER CONDITIONS
 ------------------
-CURRENT : 87°F, Mostly Clear
+CURRENT : 73°F, Clear
 ALERTS  : Heat Advisory until 4:30 AM
 HAZARDS : See ALERTS.
-FORECAST: Mostly Clear. Low 70°F. Wind W 6 mph.
+FORECAST: Mostly Clear. Low 70°F. Wind W 5 mph.
 
 HF CONDITIONS
 -------------
 SFI     : 100
-K-INDEX : 2
-80/40   : Day Fair | Night Good
+K-INDEX : 3
+80/40   : Day Poor | Night Fair
 30/20   : Day Good | Night Good
 17/15   : Day Fair | Night Fair
 12/10   : Day Poor | Night Poor
