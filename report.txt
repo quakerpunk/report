@@ -1,20 +1,20 @@
 WINLINK CUSTOM REPORT
 ---------------------
-Updated : Jul 18 03:41 PM CDT
-Sunrise: 6:29 AM   Sunset: 8:35 PM
+Updated : Jul 18 09:10 PM CDT
+Sunrise: 6:30 AM   Sunset: 8:35 PM
 
 WEATHER CONDITIONS
 ------------------
-CURRENT : 94°F, Mostly Sunny
+CURRENT : 86°F, Mostly Clear
 ALERTS  : None
-HAZARDS : Heat index up to 101°F.
-FORECAST: Mostly Sunny. High 95°F. Wind SSW 10 to 15 mph.
+HAZARDS : Heat index up to 103°F.
+FORECAST: Partly Cloudy. Low 77°F. Wind S 5 mph.
 
 HF CONDITIONS
 -------------
-SFI     : 105
-K-INDEX : 1
-80/40   : Day Fair | Night Good
+SFI     : 110
+K-INDEX : 0
+80/40   : Day Good | Night Good
 30/20   : Day Good | Night Good
 17/15   : Day Fair | Night Fair
 12/10   : Day Poor | Night Poor
