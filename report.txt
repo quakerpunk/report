@@ -1,20 +1,20 @@
 WINLINK CUSTOM REPORT
 ---------------------
-Updated : Jul 22 08:39 AM CDT
+Updated : Jul 22 12:11 PM CDT
 Sunrise: 6:31 AM   Sunset: 8:33 PM
 
 WEATHER CONDITIONS
 ------------------
-CURRENT : 85°F, Sunny
-ALERTS  : Heat Advisory until 2:15 PM
+CURRENT : 98°F, Sunny
+ALERTS  : Extreme Heat Warning until 2:00 AM
 HAZARDS : See ALERTS.
-FORECAST: Sunny. High 101°F. Wind NNE 5 to 10 mph.
+FORECAST: Sunny. High 101°F. Wind NE 10 mph.
 
 HF CONDITIONS
 -------------
-SFI     : 137
-K-INDEX : 3
-80/40   : Day Poor | Night Fair
-30/20   : Day Good | Night Good
-17/15   : Day Good | Night Good
-12/10   : Day Fair | Night Poor
+SFI     : N/A
+K-INDEX : N/A
+80/40   : Day N/A | Night N/A
+30/20   : Day N/A | Night N/A
+17/15   : Day N/A | Night N/A
+12/10   : Day N/A | Night N/A
