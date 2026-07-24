@@ -1,14 +1,14 @@
 WINLINK CUSTOM REPORT
 ---------------------
-Updated : Jul 24 05:11 AM CDT
+Updated : Jul 24 08:25 AM CDT
 Sunrise: 6:33 AM   Sunset: 8:32 PM
 
 WEATHER CONDITIONS
 ------------------
-CURRENT : 79°F, Mostly Clear
+CURRENT : 80°F, Mostly Cloudy
 ALERTS  : Heat Advisory until 2:00 PM
 HAZARDS : See ALERTS.
-FORECAST: Mostly Cloudy. Low 78°F. Wind SSE 10 mph.
+FORECAST: Partly Sunny. High 96°F. Wind S 10 to 15 mph.
 
 HF CONDITIONS
 -------------
