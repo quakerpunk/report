@@ -5,9 +5,9 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-LAT = 40.84
-LON = -81.76
-TZ = ZoneInfo("America/New_York")
+LAT = 32.98
+LON = -96.58
+TZ = ZoneInfo("America/Chicago")
 
 HEADERS = {
     "User-Agent": "WinlinkCustomReport/3.0"
