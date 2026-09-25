@@ -1,14 +1,14 @@
 WINLINK CUSTOM REPORT
 ---------------------
-Updated : Sep 24 05:57 PM CDT
-Sunrise: 7:14 AM   Sunset: 7:21 PM
+Updated : Sep 24 10:04 PM CDT
+Sunrise: 7:15 AM   Sunset: 7:20 PM
 
 WAYNE CO. WEATHER
 ------------------
-CURRENT : 94F, Mostly Sunny
+CURRENT : 83F, Partly Cloudy
 ALERTS  : Air Quality Alert until 6:00 PM
 HAZARDS : See ALERTS.
-FORECAST: Mostly Sunny. High 95F. Wind E 10 mph.
+FORECAST: Partly Cloudy. Low 68F. Wind E 5 to 10 mph.
 
 HF CONDITIONS
 -------------
