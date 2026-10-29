@@ -1,39 +1,27 @@
 The Wire
 ========
 
-//The Wire//2300Z October 26, 2026//
+//The Wire//2300Z October 28, 2026//
 //ROUTINE//
-//BLUF: PENTAGON ANNOUNCES PREPAREDNESS PLANS REGARDING MILITARY BASES WITHIN THE UNITED STATES. NETANYAHU ACCUSED OF TREASON FOR PLANNING OFFENSIVE OPERATIONS TO DELAY ELECTIONS. DIPLOMATIC VISITS TAKE PLACE IN IRAN AS GULF STATES SEEK TO CONTINUE EFFORTS TO DEESCALATE THE WAR.//
+//BLUF: MAJOR TRAIN DERAILMENT REPORTED IN SPAIN. PRESIDENT TRUMP STATES THAT ANOTHER EPIC FURY-STYLE OPERATION MAY BEGIN AFTER THE MIDTERMS. PENTAGON SENDS ANOTHER PATRIOT BATTERY TO ISRAEL. NO CLEAR WINNER OF ELECTION DECLARED IN ISRAELI ELECTION. CONTAINERSHIP STRUCK BY DRONES IN BLACK SEA.//
 
  -----BEGIN TEARLINE-----
 
 -International Events-
 
-Iran: Over the weekend, Iran conducted more ballistic missile tests, continuing the trend of earlier last week. Several launches of ballistic missiles were noted at several missile cities, as IRGC forces conducted tests of newer missile components that they have been able to develop and produce during the war. In Tehran, diplomatic endeavors continue as representatives from Saudi Arabia, Pakistan, and Turkey met to further de-escalation measures regarding the war, and to continue the dialog between all parties.
+Spain: This morning a major incident was reported on the Seville/Madrid rail line in the province of Toledo. Local authorities state that a Renfe train rear-ended an Iryo train that was halted on the track, as both were heading toward Seville. Concerning casualties, the collision resulted in a total of 46x fatalities, and 179x injured. The cause of the crash has not yet been disclosed officially, however initial reports indicate the Renfe train might have inadvertently been given instruction to proceed past a red signal. 
 
-Analyst Comment: This meeting is a big deal as this is the most public effort by Saudi Arabia to seek terms for peace. Mohammad bin Salman (MBS) sending his brother (the Defense Minister) to Tehran on peaceable terms is a diplomatic move that has not gone unnoticed by the United States and Israel. How this works out is anyone's guess, but many speculate that these are the initial first steps toward Saudi Arabia cutting a deal with the Iranians to pressure the Houthis to stop their attacks.
+Middle East: Overnight the Pentagon began the deployment of another Patriot battery to Israel, with transport aircraft being noted moving the air defense system to the region. Otherwise logistical movements continue as before, with routine cargo flights remaining constant throughout the region.
 
-Red Sea/HOA: Houthi attacks have intensified over the past few days, with substantial missile and drone attacks being reported along the Saudi East-West Pipeline. Abnormal flaring was observed at two pumping stations on Saturday, along with several large fires at petroleum storage depots as well.
+Analyst Comment: Last night President Trump himself stated at a rally in Florida that "we may do another little Epic Fury" after the midterm elections, directly confirming that the intent is present to return to the more kinetic phase of the war. Whether or not this is a genuine plan is debatable; President Trump has a history of changing his mind at the last minute....but with warfare, he has rarely bluffed. Considering the broad history of the war over the past eight months, the recent rhetoric is more indicative of a return to combat conditions rather than empty threats intended to sway diplomatic efforts.
 
-Russia: The Embassy in Tehran denied reports of evacuations over the weekend, stating that evacuations have not taken place and that they are operating as usual within Iran. Military flights continued over the weekend, however the exact nature of the cargo flights into Tehran is not known.
-
-Israel: As election day approaches, PM Netanyahu has stated that Iran has restarted their nuclear program, and are also planning to attack Israel to disrupt the elections tomorrow. Last night, former Israeli Defense Minister Avigdor Lieberman formally filed a request within the Knesset to open an investigation into PM Netanyahu on charges of treason, for his effort to restart the war with Iran to disrupt elections.
-
-Analyst Comment: At the eleventh hour, internal Israeli politics are rather important as the political situation cannot be extricated from the military situation. Many of Netanyahu's opponents within the Israeli government have countered his statements on Iranian attack plans, with many critics stating that he's fabricating the threat for political gain. Over the weekend, rumors emerged that Netanyahu had actually given the order to attack Iran, however IDF Chief of Staff Eyal Zamir pushed back on the order. Some say that he requested the order in writing and dragged his feet on the implementation, while other sources claim he flat out refused the order entirely. At the moment these claims are unconfirmed, however that's what's on the front page of domestic Israeli news organizations on the eve of their election day.
-
--HomeFront-
-
-Washington D.C. - The Pentagon announced a new initiative, Project FORTRESS, which is a preparedness plan to ensure that military bases within the United States could operate without any outside support for 90 days, in the event of enemy attack. This program is intended to come online within the next few years, with planning efforts beginning shortly.
-
-Analyst Comment: This plan was initially announced back in September as part of a list of other modernization programs, though at the time few details were released. The exact details of this plan have still not been released yet, but the plan seems to mostly center around electrical power needs. Pentagon officials are preparing for military bases to be able to function without electricity from the civilian power grid for at least three months.
+Black Sea: This afternoon another vessel was struck within Bulgarian waters, with the M/V *CONTSHIP JET* (IMO: 9348625) reporting being hit by three drones early this morning. None of the crew members were wounded, and all were rescued after abandoning ship.
 
 -----END TEARLINE-----
 
-Analyst Comment: Preparedness is often a paradox. On one hand, preparing for emergencies is generally a good thing, and allows for citizens to easily weather a disaster as comfortably as possible. However, when governments dial up disaster planning (particularly military planning), one might be inclined to think that government officials are planning to do something that would require those preparedness efforts in the first place. As a result, it's a delicate balance to manage reasonable preparedness, without causing undue concern throughout the populace. In the case of Project FORTRESS and many other more recent Pentagon modernization programs, this balance has not been achieved because it is purely military in nature...there are no similar efforts to modernize civilian disaster preparedness agencies at the same scale and budget as this military project.
+Analyst Comment: Within Israel, the vote count continued overnight, with no clear winner emerging by morning. Current vote counts as of this afternoon indicate that neither Netanyahu nor Eisenkot have received the majority needed to form a government without a coalition.
 
-The Pentagon primarily focusing this project on CONUS military bases is rather concerning, as it indicates that situations may arise which results in a loss of electrical power throughout the nation, for up to three months. Of course, 90 days is a nice round planning figure, but military bases storing enough diesel and gasoline to run generators for three months is a gargantuan planning effort all on it's own. More storage tanks will have to be built, more generators will have to be purchased, miniaturized nuclear reactors will be needed to be brought online, and an extremely substantial logistical effort will need to take place for this goal to be achieved.
-
-At minimum, if the military is internally planning to ensure their own survival during a 90-day blackout of all public utilities within the homeland, this would be a wise planning factor for prepared citizens to consider as well.
+Based on the official vote count so far, this is looking like a de facto victory for Netanyahu, even though his party is likely going to lose the majority lead they previously held. In Parliamentary systems around the world, parties which fail to get a majority, must form a coalition government with another party, counting that party's votes toward the total. In short, if a party can't clear 50%, they will have to join together with a smaller party to bump them up into the majority. Normally, when coalition governments are formed, political deals are made: the smaller party gets positions in government (and thus more power), and the larger party gets to form the majority of government. In this case, the margin is razor thin even a day after the polls closed. In the short term, the election is not likely to result in much immediate change, at least not within the window of potential escalation that's on the menu over the next few weeks. If neither party is able to secure a majority, Netanyahu remains Prime Minister for several more months, as some form of coalition is formed. If no agreement can be achieved, the election itself will be run once again next spring and the process starts all over again, with Netanyahu remaining Prime Minister in the meantime.
 
 Analyst: S2A1
 Research: https://publish.obsidian.md/s2underground
